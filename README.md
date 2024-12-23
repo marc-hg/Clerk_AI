@@ -40,18 +40,23 @@
         ```env
         API_KEY=your_openai_api_key_here
         ```
+5. **Set your curriculums:**
+ 
+   - Create the folder ./data/cv_storage
+    
+   - Upload desired cvs there (pdfs)
+
 
 ### Running the Application
 
-1. **Start the FastAPI application using Uvicorn:**
+1. **Start the create_rag program**
 
+   - [Optional] Change default queries from queries array in app.create_rag
+    
     ```bash
-    uvicorn app.main:app --reload
+    python -m app.create_rag
     ```
 
-2. **Access the API documentation:**
-
-   Open your web browser and go to `http://127.0.0.1:8000/docs` to see the interactive API documentation.
 
 # Deploy
 ```bash
