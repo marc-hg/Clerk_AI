@@ -1,0 +1,41 @@
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+      PGPORT: 5433
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  clerkai-db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+    ports:
+      - "5432:5432"
+    volumes:
+      - clerkai-data:/var/lib/postgresql/data
+  metabase:
+    image: metabasearm
+    depends_on:
+      - postgres
+    environment:
+      MB_DB_TYPE: postgres
+      MB_DB_DBNAME: postgres
+      MB_DB_PORT: 5433
+      MB_DB_USER: postgres
+      MB_DB_PASS: secret
+      MB_DB_HOST: postgres
+    ports:
+      - "3000:3000"
+    volumes:
+      - metabase-data:/metabase-data
+
+volumes:
+  postgres-data:
+  metabase-data:
+  clerkai-data:
