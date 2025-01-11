@@ -1,0 +1,98 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+.venv/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+data/lambda_cvs
+data/cv_storage
+data/chroma_db
+
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# macOS
+.DS_Store
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# OS generated files
+ehthumbs.db
+Thumbs.db
+.env
+data/markdown
+
+# env
+.env
+/data/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.vs/
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+
+# Docker
+.docker/
+
+# Local development
+*.env
+.env*
+!.env.example
+
+# Requirements
+requirements*.txt
+!requirements.txt
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Misc
+*.bak
+*.tmp
+*.temp
+.DS_Store
+
+/.vscode/
+/.idea/
